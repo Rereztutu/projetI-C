@@ -1,0 +1,290 @@
+/* Style global pour tous les éléments de la page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corps de la page : fond gris */
+body {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100vh; /* Prend toute la hauteur de la page */
+    margin: 0; /* Supprime les marges pour que l’affichage occupe tout l'écran */
+}
+
+/* Conteneur principal : Mise en page en grille couvrant toute la largeur de l'écran */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Trois colonnes : barre latérale gauche, contenu principal, barre latérale droite */
+    width: 100%; /* Utilise 100% de la largeur de l’écran */
+    height: 100vh; /* Prend toute la hauteur de l’écran */
+    gap: 20px;
+    padding: 20px; /* Espace autour des éléments internes */
+}
+
+/* En-tête principal : utilisé pour le titre principal de la page dans la balise <header> */
+header {
+    grid-column: 1 / -1; /* Occupe toute la largeur de la grille */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
+
+/* Section Armoire de Contrôle-Commande : pour la section avec l'image de l'armoire de contrôle-commande */
+#armoire_cc {
+    grid-column: 1 / -1; /* Cette section occupe toute la largeur de la grille */
+    text-align: left;
+}
+
+.armoire_image img {
+    width: 25%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet d'ombre sur l'image */
+}
+
+/* Section Faits marquants du département : pour la section qui met en évidence les informations importantes du département */
+#fais_marquants {
+    grid-column: 2 / 3; /* Cette section occupe les deux premières colonnes */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#fais_marquants h2 {
+    color: #e67e22; /* Couleur de l'en-tête pour les faits marquants */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+#fais_marquants h3 {
+    color: #2980b9; /* Couleur de l'en-tête de sous-section pour les faits marquants */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.capteur img {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+}
+
+/* Conteneur pour aligner les sections Pôles et Projets en cours */
+.container-droite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligne à droite */
+    width: 400%;
+    max-width: 300px; /* Ajustez selon la largeur souhaitée */
+    margin: 0; /* Supprime la marge pour commencer en haut */
+    padding-top: 0; /* Assure que le conteneur commence en haut */
+}
+
+/* Section Pôles */
+#poles {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#poles h2 {
+    font-size: 1.5rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+}
+
+#poles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#poles ul li {
+    margin-bottom: 10px;
+}
+
+#poles ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+#poles ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Projets en cours */
+#projets {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#projets h2 {
+    font-size: 1.5rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+}
+
+#projets ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#projets ul li {
+    margin-bottom: 10px;
+}
+
+#projets ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 1.2rem;
+}
+
+#projets ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Styles pour la section des onglets */
+#dossiers {
+    grid-column: 1 / -1; /* Occupe toute la largeur de la grille */
+    display: flex;
+    justify-content: center;
+    background-color: #3a5a6b; /* Couleur de fond */
+    padding: 10px 0;
+}
+
+#dossiers ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#dossiers ul li {
+    flex: 1; /* Chaque onglet prend une portion égale de la largeur */
+    text-align: center;
+}
+
+#dossiers ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: linear-gradient(to bottom, #fff, rgba(58, 90, 107, 0)); /* Gradient pour l'effet blanc en haut */
+    transition: background 0.3s;
+    border-radius: 80px; /* Coins arrondis */
+}
+
+#dossiers ul li a:hover {
+    background-color: #2c4655; /* Couleur de survol */
+}
+
+/* Section Équipe du département I&C : affichage de l'équipe avec les photos et rôles */
+#equipe {
+    grid-column: 1 / -1;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.equipe {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Pour que les éléments passent sur la ligne suivante si nécessaire */
+}
+
+.equipe .chief, .equipe .architect, .equipe .team .engineer {
+    text-align: center;
+    width: 120px;
+}
+
+.equipe img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Pour que les ingénieurs passent à la ligne en mode mobile */
+}
+
+/* Responsive Design pour les écrans moyens : ajuste la grille pour les tailles d'écran moyennes */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr 2fr 1fr; /* Réduit la largeur de la colonne centrale */
+    }
+}
+
+/* Responsive Design pour les petits écrans : passe en une seule colonne */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    header {
+        font-size: 1.8rem;
+    }
+
+    .equipe {
+        flex-direction: column; /* Les éléments de l'équipe passent en colonne */
+    }
+    
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Responsive Design pour les très petits écrans : ajuste les tailles de police et d'image */
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    .equipe img {
+        width: 80px;
+        height: 80px;
+    }
+
+    ul li a {
+        font-size: 0.9rem;
+    }
+}

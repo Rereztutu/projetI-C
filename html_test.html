@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Parc Instrumentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Gestion du Parc Instrumentation</h1>
+
+    <form id="importForm" enctype="multipart/form-data">
+        <label for="file">Importer un fichier CSV :</label>
+        <input type="file" id="file" name="file" required>
+        <button type="button" onclick="importData()">Importer</button>
+    </form>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Colonne 1</th>
+                <th>Colonne 2</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les données seront insérées ici par JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        function importData() {
+            const formData = new FormData(document.getElementById('importForm'));
+            axios.post('backend.php?action=import&table=carac_capt_process', formData)
+                .then(response => alert(response.data.message))
+                .catch(error => alert('Erreur lors de l\'importation.'));
+        }
+
+        function loadData() {
+            axios.get('backend.php?action=read&table=carac_capt_process')
+                .then(response => {
+                    const tbody = document.querySelector('#dataTable tbody');
+                    tbody.innerHTML = response.data.map(row => `
+                        <tr>
+                            <td>${row.id}</td>
+                            <td>${row.colonne1}</td>
+                            <td>${row.colonne2}</td>
+                            <td>
+                                <button onclick="editRow(${row.id})">Modifier</button>
+                                <button onclick="deleteRow(${row.id})">Supprimer</button>
+                            </td>
+                        </tr>
+                    `).join('');
+                });
+        }
+
+        loadData();
+    </script>
+</body>
+</html>

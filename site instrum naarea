@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Département I&C</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <!-- Conteneur principal pour la mise en page globale -->
+    <div class="container">
+
+        <!-- En-tête principal avec le titre de la page -->
+        <header>
+            <h1>Département Instrumentation & Contrôle - Commande</h1>
+        </header>
+
+        <!-- Barre de navigation pour les dossiers du département I&C -->
+        <section id="dossiers">
+            <ul>
+                <li><a href="#pbs">PBS</a></li>
+                <li><a href="#referentiel">Référentiel Métier</a></li>
+                <li><a href="#communication">Communication</a></li>
+                <li><a href="#formation">Formation</a></li>
+                <li><a href="#fournisseurs">Fournisseurs</a></li>
+                <li><a href="#reunion">Réunion d'équipe</a></li>
+                <li><a href="#outils">Outils collaboratifs I&C</a></li>
+                <li><a href="#donnees-metiers">Données Métiers</a></li>
+                <li><a href="#rex">REX</a></li>
+            </ul>
+        </section>
+
+        <!-- Section pour afficher une image de l'armoire de contrôle-commande -->
+        <section id="armoire_cc">
+            <div class="armoire_image">
+                <img src="armoire_cc.png" alt="Armoire de contrôle-commande">
+            </div>
+        </section>
+
+        <!-- Section pour les faits marquants du département -->
+        <section id="fais_marquants">
+            <h2>Faits marquants du département</h2>
+            <div class="marquant_item">
+                <h3>Instrumentation</h3>
+                <p>Mise à jour de la nouvelle base de données Capteurs avec une intégration de nouvelles colonnes de saisies pour les seuils (TB, B, H et TH).</p>
+                <div class="capteur">
+                    <img src="capteurspression.png" alt="Capteur de pression">
+                </div>
+            </div>
+        </section>
+    
+        <div class="container">
+            <!-- Contenu principal -->
+            <div class="container-droite">
+                <!-- Section listant les pôles du département I&C -->
+                <section id="poles">
+                    <h2>Pôles</h2>
+                    <ul>
+                        <li><a href="#controle-commande">Contrôle commande</a></li>
+                        <li><a href="#instrumentation">Instrumentation</a></li>
+                        <li><a href="#cybersecurite">Cybersécurité</a></li>
+                        <li><a href="#verification-validation">Vérification et validation</a></li>
+                    </ul>
+                </section>
+
+                <!-- Section pour les projets en cours du département I&C -->
+                <section id="projets">
+                    <h2>Projets en cours</h2>
+                    <ul>
+                        <li><a href="#Boucle_convection_forcée Commande">Boucle en convection forcée</a></li>
+                        <li><a href="#Instrumentation">Prototype ControlBuild</a></li>
+                        <li><a href="#exigences_fonctionnelles">Exigences fonctionnelles</a></li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+        
+        <!-- Section présentant l'équipe du département I&C avec leurs rôles et photos -->
+        <section id="equipe">
+            <h2>Équipe du département I&C</h2>
+            <div class="equipe">
+                <div class="chief">
+                    <img src="chef.png" alt="Chef de département">
+                    <p>Chef de département</p>
+                </div>
+                <div class="architect">
+                    <img src="architecte.png" alt="Architecte">
+                    <p>Architecte</p>
+                </div>
+                <div class="team">
+                    <div class="engineer">
+                        <img src="ingenieur1.png" alt="Ingénieur CC">
+                        <p>Ingénieur CC</p>
+                    </div>
+                    <div class="engineer">
+                        <img src="ingenieur1.png" alt="Ingénieur CC">
+                        <p>Ingénieur CC</p>
+                    </div>
+                    <div class="engineer">
+                        <img src="ingenieur1.png" alt="Ingénieur Auto CC">
+                        <p>Ingénieur Auto CC</p>
+                    </div>
+                    <div class="engineer">
+                        <img src="ingenieur2.png" alt="Ingénieur Instrumentation">
+                        <p>Ingénieur Instrumentation</p>
+                    </div>
+                    <div class="engineer">
+                        <img src="ingenieur1.png" alt="Ingénieur CC">
+                        <p>Ingénieur CC</p>
+                    </div>
+                    <div class="engineer">
+                        <img src="ingenieur3.png" alt="Ingénieur V&V">
+                        <p>Ingénieur V&V</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
